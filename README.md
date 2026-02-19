@@ -4,38 +4,32 @@
 
 This project presents a structured relational analysis of global **energy consumption, emissions, GDP, and population data** using MySQL.
 
-The objective was to design a normalized relational database and extract meaningful analytical insights through advanced SQL queries.
+The objective was to design a relational database and extract meaningful analytical insights through advanced SQL queries. The project focuses on understanding the relationship between economic growth, energy usage, population trends, and environmental impact.
 
-This project demonstrates strong fundamentals in:
-
-- Relational database design
-- Analytical SQL querying
-- Data modeling
-- Ratio & per capita analysis
-- Translating business questions into structured queries
+This work demonstrates practical database design and analytical problem-solving using structured query language (SQL).
 
 ---
 
 ## 🏗️ Database Architecture
 
-A normalized relational schema was designed to ensure data consistency and analytical flexibility.
+A relational schema was designed to ensure data consistency and analytical flexibility.
 
 ### Core Tables
 
 - `country`
+- `emission_3`
+- `gdp_3`
 - `population`
-- `gdp`
-- `energy_production`
-- `energy_consumption`
-- `emissions`
+- `production`
+- `consumption`
 
 ### Design Principles Applied
 
 - Primary Keys & Foreign Keys
 - Referential Integrity
-- Normalization (reducing redundancy)
-- Time-series structuring using Year dimension
-- Logical separation of economic & environmental indicators
+- Logical separation of economic and environmental data
+- Year-based time-series structuring
+- Structured relational joins across multiple tables
 
 An ER Diagram is included in the repository.
 
@@ -48,34 +42,30 @@ An ER Diagram is included in the repository.
 
 ### SQL Concepts Used
 
-- INNER JOIN & LEFT JOIN
+- INNER JOIN
 - GROUP BY & HAVING
-- Aggregate functions (SUM, AVG, COUNT)
+- Aggregate functions (SUM, AVG)
 - Subqueries
-- Derived tables
-- Window functions
+- Common Table Expressions (CTEs)
+- Window functions (LAG)
 - Ratio calculations
 - Per capita metrics
-- Trend analysis
+- Year-over-year growth analysis
 
 ---
 
 ## 🎯 Analytical Objectives
 
-The database was queried to answer high-impact analytical questions across three major dimensions:
-
----
+The database was queried to answer high-impact analytical questions across multiple dimensions.
 
 ### 1️⃣ Comparative & Trend Analysis
 
-- Total emissions per country (latest available year)
+- Total emissions per country (latest year)
 - Top 5 countries by GDP
 - Energy production vs consumption comparison
-- Year-over-year global emission trends
+- Year-over-year global emission growth
 - GDP growth trend by country
 - Population growth vs emission growth analysis
-
----
 
 ### 2️⃣ Ratio & Efficiency Analysis
 
@@ -86,12 +76,10 @@ The database was queried to answer high-impact analytical questions across three
 - Energy consumption relative to GDP
 - Average yearly change in per capita emissions
 
----
-
 ### 3️⃣ Global Impact Assessment
 
 - Global share (%) of emissions by country
-- Countries improving per capita emission efficiency
+- Countries reducing per capita emissions
 - Correlation between GDP growth and energy production growth
 - Top population countries vs emission comparison
 - Global averages of GDP, emissions, and population by year
@@ -100,23 +88,23 @@ The database was queried to answer high-impact analytical questions across three
 
 ## 📊 Key Insights
 
-- Emissions are concentrated among a small number of major economies.
-- GDP growth shows strong correlation with energy production and consumption.
-- Global emissions have increased over time due to industrial expansion.
-- Some economies demonstrate improved energy efficiency through declining emission intensity.
-- Population growth significantly impacts total emissions.
+- Emissions are highly concentrated among a small number of major economies.
+- Economic growth shows a strong relationship with energy production and consumption.
+- Global emissions have generally increased over time, driven by industrial and population growth.
+- Some countries demonstrate improved efficiency through lower emission intensity.
+- Per capita metrics reveal differences in environmental impact across economies.
 
 ---
 
 ## 💡 Skills Demonstrated
 
-✔ Relational database modeling  
-✔ Schema design & normalization  
-✔ Writing complex multi-table JOIN queries  
-✔ Aggregation & analytical computation  
-✔ Ratio engineering & per capita calculations  
-✔ Structured problem-solving using SQL  
-✔ Translating analytical questions into database queries  
+- Relational database modeling
+- Schema design with foreign key relationships
+- Multi-table joins and aggregations
+- Time-series and trend analysis
+- Window function usage (LAG)
+- Ratio and per capita metric engineering
+- Translating analytical questions into structured SQL queries
 
 ---
 
@@ -127,24 +115,4 @@ The database was queried to answer high-impact analytical questions across three
 /queries.sql
 /ER_diagram.png
 /dataset/
-/analysis_summary.md
-```
-
----
-
-## 🚀 Future Enhancements
-
-- Integration with Power BI for dashboard visualization
-- Python (Pandas + Matplotlib) integration
-- Predictive modeling for emission forecasting
-- Query performance optimization using indexing
-- Cloud-based MySQL deployment
-
----
-
-## 📎 Conclusion
-
-This project highlights the interconnected nature of global energy consumption, economic growth, and environmental impact.
-
-By leveraging MySQL and relational database design, the project transforms structured datasets into actionable analytical insights, demonstrating practical database and analytical capabilities.
-
+/analysis_summary_
